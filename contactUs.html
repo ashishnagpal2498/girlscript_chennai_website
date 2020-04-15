@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title> Contact Us </title>
@@ -12,16 +12,30 @@
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/contact-page.css" type="text/css">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    
 <body>
-    <img src="C:\Users\suman kumar\girlscript_chennai_website\assets\Images\contactus.jpg" />
+
+<body>
     <section class="main-section">
-        <div class="container pt-5 pb-5">
-            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 contact-form p-5 mb-5">
-                <h1 class="font-weight-bold mb-1">Get In <font style="color: #f47621">Touch.</font></h1>
-                <p class="ml-2 mb-5">Want to get in touch? We'd love to hear from you. Here's how you can reach us...</p>
+        <div class="container container-contact pt-5 pb-5">
+            <div class="side-sec">
+                <div class="def">
+                    <h4>Get in Touch</h4>
+                   <div class="def-sec">You need more information? <br> What other persons are saying about our product.<br> They are very happy with their purchase.</div> 
+                </div>
+                <div class="def">
+                    <h4><i class="fa fa-map-marker"></i> Find us at the office</h4>
+                    <div class="def-sec">Bld Mihail Kogalniceanu, nr. 8 7652 Bucharest, Romania </div>
+                </div>
+                <div class="def">
+                    <h4><i class="fa fa-phone"></i> Give us a ring</h4>
+                    <div class="def-sec"> Jordan +40 762 321 762 Mon - Fri, 8002200</div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 contact-form p-4 mb-5">
+                <h1 class="font-weight-bold mb-1">Contact <span style="color: #f47621;"> Us</span></h1>
                 <form class="form-horizontal" name="myForm" action="https://formspree.io/xyz@gmail.com" onsubmit="return validateForm()" method="post">
                     <div class="form-group pb-3">
                         <input type="text" id="name" name="name" placeholder=" " class="form-control no-border" required>
@@ -39,6 +53,7 @@
                         <textarea name="message" rows="4" class="form-control no-border" placeholder=" " required></textarea>
                         <label class="form-control-placeholder" for="message">Your Message</label>
                     </div>
+                    
                     <div>
                         <!-- START CAPTCHA -->
                         <br>
@@ -58,7 +73,7 @@
                         <!-- END CAPTCHA -->
                     </div>
                     <div class="form-group mb-3">
-                        <button type="submit" class="btn btn-secondary btn-lg btn-block" id="submit-button" value="Send"> Send Message </button>
+                        <button type="submit" class="center-btn-settings center-btn-settings2 btn btn-lg mt-2" id="submit-button" value="Send"> Send Message </button>
                     </div>
                 </form>
                 <script type="text/javascript">
@@ -108,7 +123,6 @@
                         return string.split(' ').join('');
                     }
                 </script>
-
             </div>
         </div>
 
@@ -126,6 +140,10 @@
         document.myForm.name.focus();
         return false;
       }
+
+      var emailID = document.myForm.email.value;
+      atpos = emailID.indexOf("@");
+      dotpos = emailID.lastIndexOf(".");
   
       var emailID = document.myForm.email.value;
       atpos = emailID.indexOf("@");
@@ -136,7 +154,7 @@
         document.myForm.email.focus() ;
         return false;
         }
-  
+
       var subject = document.myForm.subject.value;
       var message = document.myForm.message.value;
       if(subject.length < 10) {
@@ -149,8 +167,11 @@
               document.myForm.message.focus() ;
               return false;
            }
-  
+
         return( true );
     }
+    $(".btn").mousedown(function(e){
+          e.preventDefault();
 </script>
+</html>
 </html>

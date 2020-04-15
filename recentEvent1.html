@@ -27,7 +27,7 @@
 </head>
 
   <body>
-    <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
+    <nav class="navbar navbar-expand-lg" id="navbar">
     	<a class="navbar-brand" href="index.html"><img src="assets/Images/transparent_logo.png" id="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -158,6 +158,11 @@
 
     <a class="gotopbtn" href="#"> <i class="fa fa-arrow-up" style="color:white"></i> </a>
     <!-- Script -->
+    <script>
+      $(".btn").mousedown(function(e){
+      e.preventDefault();
+    })
+    </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.5.2/min/tiny-slider.js'></script>
 
     <script data-cfasync="false" type="text/javascript" src="./scripts/google-script-just-email.js"></script>
